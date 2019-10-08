@@ -1,11 +1,27 @@
 package foo;
 
-import org.junit.Assert;
+import org.asynchttpclient.AsyncHttpClient;
+import org.asynchttpclient.Response;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+
+import static org.asynchttpclient.Dsl.*;
+
 public class FooTest {
+
+  AsyncHttpClient client;
+
+  @Before
+  public void setup() {
+    client = asyncHttpClient();
+  }
+
   @Test
-  public void test1() {
-    Assert.assertTrue(new Foo().foo().contains("cat"));
+  public void test1() throws ExecutionException, InterruptedException {
+    Future<Response> whenResponse = client.prepareGet("http://localhost/dashboard/").execute();
+    Response response = whenResponse.get();
   }
 }

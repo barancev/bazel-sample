@@ -1,0 +1,16 @@
+package(default_visibility = ["//visibility:public"])
+
+VERSION = "2.10.3"
+
+java_import(
+    name = "async-http-client",
+    jars = [ "async-http-client-%s.jar" % VERSION ],
+    deps = [
+        ":async-http-client-netty-utils",
+    ],
+)
+
+java_import(
+    name = "async-http-client-netty-utils",
+    jars= [ "async-http-client-netty-utils-%s.jar" % VERSION ],
+)

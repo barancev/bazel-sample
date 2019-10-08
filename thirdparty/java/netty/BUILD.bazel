@@ -1,0 +1,12 @@
+package(default_visibility = ["//visibility:public"])
+
+VERSION = "4.1.25.Final"
+
+java_import(
+    name = "netty",
+    jars = [ "netty-all-%s.jar" % VERSION ],
+    deps = [
+        "//thirdparty/java/slf4j:slf4j-api",
+        "//thirdparty/java/slf4j:slf4j-jdk14",
+    ],
+)

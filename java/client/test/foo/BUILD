@@ -6,5 +6,8 @@ java_test(
         "//java/client/src/foo:Foo",
         "//thirdparty/java/junit:junit",
         "//thirdparty/java/junit:hamcrest",
+        "//thirdparty/java/async-http-client",
+        "//thirdparty/java/netty",
+        "//thirdparty/java/reactive-streams",
     ],
 )

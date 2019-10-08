@@ -17,7 +17,7 @@ java_import(
     "notice",  # BSD
   ],
   jars = [
-    'hamcrest-core-1.3.jar',
+    'hamcrest-2.1.jar',
   ],
   visibility = [
     '//java/client/test:__subpackages__',

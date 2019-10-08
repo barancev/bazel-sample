@@ -1,0 +1,8 @@
+package(default_visibility = ["//visibility:public"])
+
+VERSION = "1.0.3"
+
+java_import(
+    name = "reactive-streams",
+    jars = [ "reactive-streams-%s.jar" % VERSION ],
+)
