@@ -21,7 +21,7 @@ public class FooTest {
 
   @Test
   public void test1() throws ExecutionException, InterruptedException {
-    Future<Response> whenResponse = client.prepareGet("http://localhost/dashboard/").execute();
+    Future<Response> whenResponse = client.prepareGet("https://www.seleniumhq.org/").execute();
     Response response = whenResponse.get();
   }
 }
